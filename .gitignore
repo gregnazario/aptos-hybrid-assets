@@ -1,0 +1,7 @@
+build/
+.idea/
+.aptos/
+*.swp
+*.swo
+.coverage_map.mvcov
+boogie.bpl
