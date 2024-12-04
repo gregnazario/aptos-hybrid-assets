@@ -1,0 +1,22 @@
+[package]
+name = "nft_utils"
+version = "1.0.0"
+authors = []
+
+[addresses]
+hybrid_address = "_"
+nft_util_addr = "_"
+deployer = "_"
+
+[dev-addresses]
+hybrid_address = "0xdead"
+nft_util_addr = "0xbeef"
+deployer = "0xcafe"
+
+[dependencies.AptosFramework]
+git = "https://github.com/aptos-labs/aptos-framework.git"
+rev = "mainnet"
+subdir = "aptos-framework"
+
+[dependencies.hybrid]
+local = "../hybrid-base"
