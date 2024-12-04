@@ -1,6 +1,6 @@
 /// Hybrid Example
 ///
-/// This randomly chooses between 5 different NFTs to reveal.
+/// This randomly chooses between 6 different NFTs to reveal.
 module hybrid_example_addr::hybrid_example {
 
     use std::option;
@@ -50,20 +50,20 @@ module hybrid_example_addr::hybrid_example {
     const E_ALREADY_REVEALED: u64 = 4;
 
     /// Maximum number of NFTs for randomness
-    const MAX_COMBINATIONS: u64 = 5;
+    const MAX_COMBINATIONS: u64 = 6;
 
     const COLLECTION_NAME: vector<u8> = b"Hybrid Example";
     const COLLECTION_DESCRIPTION: vector<u8> = b"Hybrid Example Collection";
-    const COLLECTION_URI: vector<u8> = b"";
+    const COLLECTION_URI: vector<u8> = b"https://raw.githubusercontent.com/gregnazario/aptos-hybrid-assets/refs/heads/main/hybrid-example/images/mystery.jpeg";
     const HIDDEN_NAME: vector<u8> = b"Mystery Box";
-    const HIDDEN_URI: vector<u8> = b"";
+    const HIDDEN_URI: vector<u8> = b"https://raw.githubusercontent.com/gregnazario/aptos-hybrid-assets/refs/heads/main/hybrid-example/images/mystery.jpeg";
     const HIDDEN_DESCRIPTION: vector<u8> = b"Reveal to figure out what it will be!";
 
     const FA_NAME: vector<u8> = b"Example Hybrid Coin";
     const FA_SYMBOL: vector<u8> = b"HYBRID";
     const DECIMALS: u8 = 8;
-    const FA_ICON_URL: vector<u8> = b"";
-    const FA_PROJECT_URL: vector<u8> = b"";
+    const FA_ICON_URL: vector<u8> = b"https://raw.githubusercontent.com/gregnazario/aptos-hybrid-assets/refs/heads/main/hybrid-example/images/coin.jpeg";
+    const FA_PROJECT_URL: vector<u8> = b"https://github.com/gregnazario/aptos-hybrid-assets/tree/main/hybrid-example";
 
     const NUM_TOTAL_NFTS: u64 = 100;
     const NUM_TOKENS_PER_NFT: u64 = 10;
@@ -144,7 +144,9 @@ module hybrid_example_addr::hybrid_example {
         move_to(&object_signer, RevealStageMetadata {
             name_prefix: string::utf8(b"Revealed Example "),
             nft_description: string::utf8(b"A revealed example"),
-            nft_base_uri: string::utf8(b""),
+            nft_base_uri: string::utf8(
+                b"https://raw.githubusercontent.com/gregnazario/aptos-hybrid-assets/refs/heads/main/hybrid-example/images/"
+            ),
             nft_uri_extension: string::utf8(b".jpeg"),
         });
 
