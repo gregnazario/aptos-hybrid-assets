@@ -11,4 +11,4 @@ currently being supported with security updates.
 
 ## Reporting a Vulnerability
 
-Email greg@gnazar.io
+Create a GitHub issue
