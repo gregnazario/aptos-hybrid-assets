@@ -5,13 +5,11 @@ authors = []
 
 [addresses]
 hybrid_example_addr = "_"
-hybrid_address = "_"
-deployer = "_"
+hybrid_address = "0xbbe8a08f3b9774fccb31e02def5a79f1b7270b2a1cb9ffdc05b2622813298f2a"
+deployer = "0xaddedfb9bd74560e1c2cd00137e8db9a9b28bbcea3361f2e48ca52331c850c95"
 
 [dev-addresses]
 hybrid_example_addr = "0xCAFE"
-hybrid_address = "0x9ec5c31592d4046e863c8e9b1a937191a9d769d2f6fbba95be6ad30b5fcb125f"
-deployer = "0xb98022721f97da65950435386a5209be2fc54bed5f12fc8ea0a1c3d0c76f562f"
 
 [dependencies.hybrid]
 local = "../hybrid-base"
